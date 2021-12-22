@@ -11,9 +11,7 @@ export default class App extends Component {
         <Nav />
         <Router>
           <Switch>
-            <Route exact path="/" render = {props => (
-              <Home {...props} className='app__home' />
-            )} />
+            <Route exact path="/" component={Home} />
           </Switch>
         </Router>
         {/* // Footer */}

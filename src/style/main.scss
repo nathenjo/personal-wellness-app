@@ -26,7 +26,7 @@ body {
 
 .app {
     display: grid;
-    grid-template-rows: 60px [content-s] 0.75fr [content-e footer-s] 0.25fr [footer-e];
+    grid-template-rows: 60px [content-s] 0.75fr [content-e] 0.25fr;
     grid-template-columns: [app-s] 1fr [app-e];
     justify-items: center;
 }
