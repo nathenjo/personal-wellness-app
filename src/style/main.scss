@@ -10,12 +10,13 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    background-color: $yellow;
 }
 
 body {
     overflow-x: hidden;
     font-weight: normal;
+    background-color: $yellow;
+
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,9 +26,10 @@ body {
 
 .app {
     display: grid;
-    grid-template-rows: [nav-s] 60px [nav-e content-s] 0.75fr [content-e footer-s] 0.25fr [footer-e];
-    grid-template-columns: [s] 1fr [e];
+    grid-template-rows: 60px [content-s] 0.75fr [content-e footer-s] 0.25fr [footer-e];
+    grid-template-columns: [app-s] 1fr [app-e];
     justify-items: center;
 }
 
 @import "./home.scss";
+@import "./navigation.scss";

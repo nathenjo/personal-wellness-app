@@ -1,6 +1,6 @@
 .home {
     grid-row: content-s/content-e;
-    grid-column: s/e;
+    grid-column: app-s/app-e;
 
     display: grid;
     grid-template-columns: [left-s] 1fr [left-e right-s] 1fr [right-e];
