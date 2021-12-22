@@ -61,6 +61,7 @@
                 justify-items: start;
                 gap: 0px 10px;
                 .fas {
+                    align-self: center;
                     justify-self: end;
                     grid-column: icon-s/icon-e;
                 }
