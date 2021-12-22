@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 export default function Nav(props) {
 
+    const { links } = props;
+
     const [clicked, setClicked] = useState(false);
     const [showDropdown, setShowDropdown] = useState({transform: "translateX(-120px)"});
 
@@ -17,10 +19,9 @@ export default function Nav(props) {
          <div className='nav'>
             <i onClick={() => setClicked(!clicked)} className="fas fa-caret-right"></i>
             <div style={showDropdown} className='nav__dropdown'>
-                <div>Login</div>
-                <div>Create Account</div>
-                <div>About</div>
-                <div>Site Map</div>
+                {links.map((link, index) => {
+                    return <div key={index} className='nav__dropdown__link'>{link}</div>
+                })}
             </div>
          </div>
        );

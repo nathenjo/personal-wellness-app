@@ -26,10 +26,11 @@ body {
 
 .app {
     display: grid;
-    grid-template-rows: 60px [content-s] 0.75fr [content-e] 0.25fr;
+    grid-template-rows: 60px [content-s] 0.5fr [content-e] 100px [footer-s] 0.1fr [footer-e];
     grid-template-columns: [app-s] 1fr [app-e];
     justify-items: center;
 }
 
 @import "./home.scss";
 @import "./navigation.scss";
+@import "./footer.scss";
