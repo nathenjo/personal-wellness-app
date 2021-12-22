@@ -1,0 +1,83 @@
+.home {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+
+    display: grid;
+    grid-template-columns: [left-s] 1fr [left-e right-s] 1fr [right-e];
+    @media only screen and (max-width: 600px) {
+        .home {
+            grid-template-columns: [home-s] 1fr [home-e];
+            grid-template-rows: [image-s] 1fr [image-e text-s] 1fr [text-e];
+            &__left-column {
+                grid-column: home-s/home-e;
+                grid-row: image-s/image-e;
+            }
+            &__right-column {
+                grid-column: home-s/home-e;
+                grid-row: text-s/text-e;
+            }
+        }
+    }
+    grid-template-rows: [s] 1fr [e];
+    gap: 0px 20px;
+    & > * {
+        grid-row: s/e;
+    }
+    &__left-column {
+        grid-column: left-s/left-e;
+    }
+    &__right-column {
+        grid-column: right-s/right-e;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        text-align: center;
+        &__top-row {
+            font-size: 30px;
+            font-family: $title;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        &__middle-row {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 16px;
+            font-family: $non-title;
+            &__item {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                .fas {
+                    font-size: 1.5rem;
+                }
+                transition: 0.4s all ease;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.02);
+                    color: $orange;
+                }
+            }
+            div:nth-child(2) {
+                gap: 5px;
+            }
+        }
+        &__bottom-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 15px;
+            &__item {
+                font-size: 16px;
+            }
+            div:first-child {
+                font-size: 22px;
+                font-family: $title;
+                border-bottom: 1px solid black;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+}

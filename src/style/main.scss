@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -8,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'montserrat';
+    background-color: $yellow;
 }
 
 body {
@@ -22,7 +24,10 @@ body {
 }
 
 .app {
-    margin-top: 2rem;
     display: grid;
+    grid-template-rows: [nav-s] 60px [nav-e content-s] 0.75fr [content-e footer-s] 0.25fr [footer-e];
+    grid-template-columns: [s] 1fr [e];
     justify-items: center;
 }
+
+@import "./home.scss";
