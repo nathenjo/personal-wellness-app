@@ -11,29 +11,29 @@ export default function Home(props) {
                     Personal Wellness App
                 </div>
                 <div className='home__right-column__middle-row'>
-                    <div className='home__right-column__middle-row__item'><i class="fas fa-user-tie"></i>Returning User? Welcome Back!</div>
-                    <div className='home__right-column__middle-row__item'><i class="fas fa-user-tie"></i><i class="fas fa-plus"></i>New User? A Most Welcome To You!</div>
+                    <div className='home__right-column__middle-row__item'><i className="fas fa-user-tie"></i>Returning User? Welcome Back!</div>
+                    <div className='home__right-column__middle-row__item'><i className="fas fa-user-plus"></i>New User? A Most Welcome To You!</div>
                 </div>
                 <div className='home__right-column__bottom-row'>
                     <div className='home__right-column__bottom-row__item'>Keep track of all your wellbeing</div>
                     <div className='home__right-column__bottom-row__item'>
-                        <i class="fas fa-list-ol"></i>
+                        <i className="fas fa-list-ol"></i>
                         Productivity
                     </div>
                     <div className='home__right-column__bottom-row__item'>
-                        <i class="fas fa-piggy-bank"></i>
+                        <i className="fas fa-piggy-bank"></i>
                         Financial
                     </div>
                     <div className='home__right-column__bottom-row__item'>
-                        <i class="fas fa-dove"></i>
+                        <i className="fas fa-dove"></i>
                         Spiritual
                     </div>
                     <div className='home__right-column__bottom-row__item'>
-                        <i class="fas fa-dumbbell"></i>
+                        <i className="fas fa-dumbbell"></i>
                         Physical
                     </div>
                     <div className='home__right-column__bottom-row__item'>
-                        <i class="fas fa-users"></i>    
+                        <i className="fas fa-users"></i>    
                         Social
                     </div>
                 </div>

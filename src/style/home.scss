@@ -11,6 +11,9 @@
     }
     &__left-column {
         grid-column: left-s/left-e;
+        img {
+            border-radius: 25px;
+        }
     }
     &__right-column {
         grid-column: right-s/right-e;

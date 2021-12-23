@@ -1,8 +1,8 @@
 .footer {
     justify-self: center;
     background-color: $dark-gray;
-    grid-row: footer-s/footer-e;
-    grid-column: 1/-1;
+    bottom: 0px;
+    position: absolute;
     border-radius: 150px  150px 0 0;
     height: 150px;
     width: 75vw;
@@ -28,7 +28,7 @@
         }
     }
     &__links {
-        border-top: 1px solid $green;
+        border-top: 1px solid $yellow;
         grid-row: links-s/links-e;
         display: flex;
         justify-content: space-around;
