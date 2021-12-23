@@ -24,13 +24,6 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-.app {
-    display: grid;
-    grid-template-rows: [nav-s] 60px [nav-e content-s] 0.5fr [content-e] 100px [footer-s] 0.1fr [footer-e];
-    grid-template-columns: [app-s] 1fr [app-e];
-    justify-items: center;
-}
-
 @import "./home.scss";
 @import "./navigation.scss";
 @import "./footer.scss";

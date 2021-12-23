@@ -1,11 +1,11 @@
 .footer {
-    justify-self: center;
+    grid-row: footer-s/footer-e;
+    place-self: end center;
+    grid-column: app-s/app-e;
     background-color: $dark-gray;
-    bottom: 0px;
-    position: absolute;
     border-radius: 150px  150px 0 0;
     height: 150px;
-    width: 75vw;
+    width: 45vw;
     
     display: grid;
     grid-template-columns: 0.1fr [footer-column-s] 1fr [footer-column-e] 0.1fr;

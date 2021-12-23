@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import history from './history';
+
 export default function Nav(props) {
 
     const { links } = props;
@@ -20,7 +22,7 @@ export default function Nav(props) {
             <i onClick={() => setClicked(!clicked)} className="fas fa-caret-right"></i>
             <div style={showDropdown} className='nav__dropdown'>
                 {links.map((link, index) => {
-                    return <div key={index} className='nav__dropdown__link'>{link}</div>
+                    return <div onClick={() => history.push(`/${link.toLowerCase()}`)} key={index} className='nav__dropdown__link'>{link}</div>
                 })}
             </div>
          </div>
