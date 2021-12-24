@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 html {
     font-size: 62.5%; // 1rem is 10px
@@ -24,6 +25,8 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+@import "./app.scss";
+@import "./logo.scss";
 @import "./home.scss";
 @import "./navigation.scss";
 @import "./footer.scss";

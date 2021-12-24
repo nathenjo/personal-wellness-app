@@ -1,10 +1,7 @@
 .home {
-    display: grid;
-    grid-template-rows: [nav-s] 60px [nav-e content-s] 1fr [content-e] 50px [footer-s] 0.25fr [footer-e];
-    grid-template-columns: 0.25fr [app-s] 1fr [app-e] 0.25fr;
+    grid-row: content-s/content-e;
+    grid-column: app-s/app-e;
     &__content {
-        grid-row: content-s/content-e;
-        grid-column: app-s/app-e;
         display: grid;
         grid-template-columns: [left-column-s] 0.5fr [left-column-e right-column-s] 0.5fr [right-column-e];
         grid-template-rows: [s] 1fr [e];
@@ -48,9 +45,8 @@
                     }
                     transition: 0.4s all ease;
                     &:hover {
-                        cursor: pointer;
+                        @include default-hover();
                         transform: scale(1.02);
-                        color: $orange;
                     }
                 }
             }

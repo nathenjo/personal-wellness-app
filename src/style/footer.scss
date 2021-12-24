@@ -1,7 +1,7 @@
 .footer {
     grid-row: footer-s/footer-e;
-    place-self: end center;
     grid-column: app-s/app-e;
+    place-self: end center;
     background-color: $dark-gray;
     border-radius: 150px  150px 0 0;
     height: 150px;
@@ -22,8 +22,7 @@
         & > * {
             align-self: center;
             &:hover {
-                cursor: pointer;
-                color: $orange;
+                @include default-hover();
             }
         }
     }
@@ -38,8 +37,7 @@
             font-size: 14px;
             font-family: $non-title;
             &:hover {
-                cursor: pointer;
-                color: $orange;
+                @include default-hover();
             }
         }
     }

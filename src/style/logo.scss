@@ -1,0 +1,10 @@
+.logo {
+    grid-row: nav-s/nav-e;
+    grid-column: app-s/app-e;
+    position: absolute;
+    place-self: stretch center;
+    transition: 0.3s all ease;
+    &:active {
+        transform: scale(0.8);
+    }
+}

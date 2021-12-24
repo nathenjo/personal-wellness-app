@@ -2,10 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
-import { Router, Switch, Route } from "react-router-dom";
-import Home from "./components/home";
-import Login from "./components/pages/login";
-import history from "./components/history";
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/app";
 import reducers from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
@@ -15,12 +13,9 @@ import "./style/main.scss";
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <Router history={history}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-        </Switch>
-      </Router>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
   );

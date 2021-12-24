@@ -39,8 +39,7 @@
         font-family: $title;
         div {
             &:hover {
-                cursor: pointer;
-                color: $orange;
+                @include default-hover();
             }
         }
     }
