@@ -24,7 +24,7 @@
     }
     &__dropdown {
         transition: 0.4s all ease;
-        background-color: $dark-gray;
+        background-color: rgba(0, 0, 0, 0.8);
         opacity: 0.8;
 
         display: flex;
