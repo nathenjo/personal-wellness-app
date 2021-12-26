@@ -1,0 +1,42 @@
+.login {
+    grid-row: content-s/content-e;
+    grid-column: app-s/app-e;
+    align-self: center;
+
+    &__form {
+        display: grid;
+        grid-template-rows: [email-s] 30px [email-e] 1fr [password-s] 30px [password-e] 20px [button-s] 30px [button-e];
+        grid-template-columns: 0.5fr [label-s] 1fr [label-e button-s] 45px [button-e input-s] 1fr [input-e] 0.5fr;
+        gap: 20px 0px;
+
+        .email-label {
+            grid-row: email-s/email-e;
+            grid-column: label-s/label-e;
+            @include label-style();
+            place-self: center;
+        }
+        .email-input {
+            grid-row: email-s/email-e;
+            grid-column: input-s/input-e;
+            @include input-style();
+            width: 75%;
+        }
+        .password-label {
+            grid-row: password-s/password-e;
+            grid-column: label-s/label-e;
+            @include label-style();
+            place-self: center;
+        }
+        .password-input {
+            grid-row: password-s/password-e;
+            grid-column: input-s/input-e;
+            @include input-style();
+            width: 75%;
+        }
+        .login__button {
+            grid-row: button-s/button-e;
+            grid-column: button-s/button-e;
+        }
+    }
+
+}

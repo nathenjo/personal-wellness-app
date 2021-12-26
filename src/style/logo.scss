@@ -1,9 +1,17 @@
 .logo {
     grid-row: nav-s/nav-e;
     grid-column: app-s/app-e;
+    margin-top: 10px;
     position: absolute;
     place-self: stretch center;
     transition: 0.3s all ease;
+    img {
+        width: 80px;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
     &:active {
         transform: scale(0.8);
     }

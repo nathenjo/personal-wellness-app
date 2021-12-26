@@ -1,6 +1,6 @@
 @mixin base-layout {
     display: grid;
-    grid-template-rows: [nav-s] 100px [nav-e content-s] 1fr [content-e] 50px [footer-s] 0.25fr [footer-e];
+    grid-template-rows: [nav-s] 100px [nav-e content-s] minmax(500px, 1fr) [content-e] 50px [footer-s] 0.25fr [footer-e];
     grid-template-columns: 0.25fr [app-s] 1fr [app-e] 0.25fr;
 }
 
@@ -10,5 +10,25 @@
 }
 
 @mixin input-style {
-    
+    border: none;
+    padding-left: 20px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid black;
+    background-color: $yellow;
+    font-family: $non-title;
+    letter-spacing: 1px;
+    &::placeholder {
+        opacity: 0.5;
+    }
+    &:focus {
+        outline: none;
+        // transform: scale(1.1);
+        -webkit-box-shadow: inset 0px 0px 5px 1px $orange; 
+        box-shadow: inset 0px 0px 5px 1px $orange;
+    }
+}
+
+@mixin label-style {
+    font-size: 18px;
+    font-family: $non-title;
 }
