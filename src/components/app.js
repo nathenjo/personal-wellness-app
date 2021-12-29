@@ -7,13 +7,21 @@ import Footer from './footer';
 import Login from './pages/login';
 import NoPath from './noPath';
 import Logo from './logo';
+import Account from './pages/account';
 
 export default function App(){
 
     const [historyState, setHistoryState] = useState(history.location.pathname);
+    const [user, setUser] = useState({});
+    const [loggedIn, setLoggedIn] = useState(false);
 
     useEffect(() => {
         history.push(historyState);
+        if (loggedIn) {
+            links.push('Logout')
+        } else {
+            links.shift('Logout')
+        }
     })
 
     const links = ["Login", "Create Account", "About", "Site Map"];
@@ -22,7 +30,9 @@ export default function App(){
         if (historyState == '/') {
             return <Home setHistoryState={setHistoryState} />
         } else if (historyState == '/login') {
-            return <Login />
+            return <Login setLoggedIn={setLoggedIn} setUser={setUser} setHistoryState={setHistoryState} />
+        } else if (historyState == '/account') {
+            return <Account setHistoryState={setHistoryState} user={user} />
         } else {
             return <NoPath />
         }

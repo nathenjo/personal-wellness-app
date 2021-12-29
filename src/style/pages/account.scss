@@ -1,0 +1,39 @@
+.account {
+    grid-row: content-s/content-e;
+    grid-column: app-s/app-e;
+    place-self: start center;
+    &__title {
+
+    }
+    &__body {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 30px;
+        & > * {
+            img {
+                border-radius: 50%;
+            }
+        }
+        &__productivity {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            justify-self: center;
+        }
+        &__finances {
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        &__spiritual {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        &__physical {
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+        &__social {
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+    }
+}

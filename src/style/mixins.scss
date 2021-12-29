@@ -1,6 +1,6 @@
 @mixin base-layout {
     display: grid;
-    grid-template-rows: [nav-s] 100px [nav-e content-s] minmax(500px, 1fr) [content-e] 50px [footer-s] 0.25fr [footer-e];
+    grid-template-rows: [nav-s] 100px [nav-e] 30px [content-s] minmax(650px, 1fr) [content-e] 50px [footer-s] 0.25fr [footer-e];
     grid-template-columns: 0.25fr [app-s] 1fr [app-e] 0.25fr;
 }
 

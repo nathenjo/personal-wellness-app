@@ -1,0 +1,11 @@
+.no-path {
+    grid-row: content-s/content-e;
+    grid-column: app-s/app-e;
+    place-self: center center;
+    font-size: 1.5rem;
+    font-family: $non-title;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}

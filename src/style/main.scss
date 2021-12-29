@@ -30,5 +30,10 @@ body {
 @import "./home.scss";
 @import "./navigation.scss";
 @import "./footer.scss";
-@import "./login.scss";
-@import "./button.scss";
+@import "./no-path.scss";
+
+@import "./pages/login.scss";
+@import "./pages/account.scss";
+
+@import "./helpers/button.scss";
+@import "./helpers/image-link.scss";
