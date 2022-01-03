@@ -20,7 +20,7 @@ export default function App(){
         if (loggedIn) {
             links.push('Logout')
         } else {
-            links.shift('Logout')
+            links.filter(word => word == 'Logout')
         }
     })
 
@@ -40,7 +40,7 @@ export default function App(){
 
    return(
      <div className='app'>
-        <Nav setHistoryState={setHistoryState} links={links} />
+        <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} setHistoryState={setHistoryState} links={links} />
         <Logo setHistoryState={setHistoryState} />
         {renderPages()}
         <Footer links={links} />
