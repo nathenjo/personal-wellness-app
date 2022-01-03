@@ -8,6 +8,7 @@ import Login from './pages/login';
 import NoPath from './noPath';
 import Logo from './logo';
 import Account from './pages/account';
+import NewAccount from './pages/newAccount';
 
 export default function App(){
 
@@ -33,6 +34,8 @@ export default function App(){
             return <Login setLoggedIn={setLoggedIn} setUser={setUser} setHistoryState={setHistoryState} />
         } else if (historyState == '/account') {
             return <Account setHistoryState={setHistoryState} user={user} />
+        } else if (historyState == '/new-account') {
+            return <NewAccount />
         } else {
             return <NoPath />
         }
