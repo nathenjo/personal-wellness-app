@@ -2,4 +2,53 @@
     grid-row: content-s/content-e;
     grid-column: app-s/app-e;
     place-self: center center;
+
+    display: grid;
+    grid-template-rows: [name-s] 1fr [name-e email-s] 1fr [email-e password-s] 1fr [password-e confirm-s] 1fr [confirm-e button-s] 0.25fr [button-e];
+    grid-template-columns: [label-s] 1fr [label-e button-s] 0.25fr [button-e input-s] 1fr [input-e];
+    gap: 20px 0px;
+    &__label-name {
+        grid-row: name-s/name-e;
+        grid-column: label-s/label-e;
+        @include label-style();
+    }
+    &__input-name {
+        grid-row: name-s/name-e;
+        grid-column: input-s/input-e;
+        @include input-style();
+    }
+    &__label-email {
+        grid-row: email-s/email-e;
+        grid-column: label-s/label-e;
+        @include label-style();
+    }
+    &__input-email {
+        grid-row: email-s/email-e;
+        grid-column: input-s/input-e;
+        @include input-style();
+    }
+    &__label-password {
+        grid-row: password-s/password-e;
+        grid-column: label-s/label-e;
+        @include label-style();
+    }
+    &__input-password {
+        grid-row: password-s/password-e;
+        grid-column: input-s/input-e;
+        @include input-style();
+    }
+    &__label-confirm-password {
+        grid-row: confirm-s/confirm-e;
+        grid-column: label-s/label-e;
+        @include label-style();
+    }
+    &__input-confirm-password {
+        grid-row: confirm-s/confirm-e;
+        grid-column: input-s/input-e;
+        @include input-style();
+    }
+    &__button {
+        grid-row: button-s/button-e;
+        grid-column: button-s/button-e;
+    }
 }
