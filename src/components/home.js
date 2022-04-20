@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Home(props) {
 
-    const {setHistoryState} = props;
-
+    const navigate = useNavigate();
 
        return(
          <div className="home">
@@ -18,8 +18,8 @@ export default function Home(props) {
                         Personal Wellness App
                     </div>
                     <div className='middle-row'>
-                        <div onClick={() => setHistoryState('/login')} className='middle-row__item'><i className="fas fa-user-tie"></i>Returning User? Welcome Back!</div>
-                        <div onClick={() => setHistoryState('/new-account')} className='middle-row__item'><i className="fas fa-user-plus"></i>New User? A Most Welcome To You!</div>
+                        <div onClick={() => navigate('/login', {replace: true})} className='middle-row__item'><i className="fas fa-user-tie"></i>Returning User? Welcome Back!</div>
+                        <div onClick={() => navigate('/signup', {replace: true})} className='middle-row__item'><i className="fas fa-user-plus"></i>New User? A Most Welcome To You!</div>
                     </div>
                     <div className='bottom-row'>
                         <div className='bottom-row__item'>Keep track of all your wellbeing</div>

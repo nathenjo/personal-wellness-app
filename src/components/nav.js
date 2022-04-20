@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Nav(props) {
 
-    const { links, setHistoryState, setLoggedIn, loggedIn } = props;
+    const {loggedIn, links} = props;
 
     const [clicked, setClicked] = useState(false);
     const [showDropdown, setShowDropdown] = useState({transform: "translateX(-120px)"});
@@ -18,15 +18,15 @@ export default function Nav(props) {
     return(
         <div className='nav'>
         <i onClick={() => setClicked(!clicked)} className="fas fa-caret-right"></i>
-        <div style={showDropdown} className='nav__dropdown'>
+        {/* <div style={showDropdown} className='nav__dropdown'>
             {links.map((link, index) => {
                 if (link == "Logout") {
-                    return <div onClick={() => setHistoryState('/') & setLoggedIn(false)} key={index} className='nav__dropdown__link'>{link}</div>
+                    return <div key={index} className='nav__dropdown__link'>{link}</div>
                 } else {
-                    return <div onClick={() => setHistoryState(`/${link.toLowerCase()}`)} key={index} className='nav__dropdown__link'>{link}</div>
+                    return <div key={index} className='nav__dropdown__link'>{link}</div>
                 }
             })}
-        </div>
+        </div> */}
         </div>
     );
 }

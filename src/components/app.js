@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import history from './history';
+import {
+    BrowserRouter,
+    Routes,
+    Route
+  } from "react-router-dom";
 
 import Home from './home';
 import Nav from './nav';
@@ -12,41 +17,28 @@ import NewAccount from './pages/newAccount';
 
 export default function App(){
 
-    const [historyState, setHistoryState] = useState(history.location.pathname);
     const [user, setUser] = useState({});
     const [loggedIn, setLoggedIn] = useState(false);
 
+    const links = ['Home', 'Logout', 'Login'];
+
     useEffect(() => {
-        history.push(historyState);
-        if (loggedIn) {
-            links.push('Logout')
-        } else {
-            links.filter(word => word == 'Logout')
-        }
+
     })
-
-    const links = ["Login", "Create Account", "About", "Site Map"];
-
-    const renderPages = () => {
-        if (historyState == '/') {
-            return <Home setHistoryState={setHistoryState} />
-        } else if (historyState == '/login') {
-            return <Login setLoggedIn={setLoggedIn} setUser={setUser} setHistoryState={setHistoryState} />
-        } else if (historyState == '/account') {
-            return <Account setHistoryState={setHistoryState} user={user} />
-        } else if (historyState == '/new-account') {
-            return <NewAccount />
-        } else {
-            return <NoPath />
-        }
-    }
 
    return(
      <div className='app'>
-        <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} setHistoryState={setHistoryState} links={links} />
-        <Logo setHistoryState={setHistoryState} />
-        {renderPages()}
-        <Footer links={links} />
+        <BrowserRouter>
+        <Logo />
+        <Nav loggedIn={loggedIn} />
+        <Routes>
+          <Route path='/' element={<Home loggedIn={loggedIn} />} />
+          <Route path='/login' element={<Login setLoggedIn={setLoggedIn} user={user} setUser={setUser} loggedIn={loggedIn} />} />
+          <Route path='/account' element={<Account user={user} loggedIn={loggedIn} />} />
+          <Route path="*" element={<NoPath />} />
+        </Routes>
+        <Footer className='app__footer' />
+      </BrowserRouter>
      </div>
    );
 }

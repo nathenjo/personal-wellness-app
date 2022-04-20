@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../helpers/button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(props){
 
-  const { setHistoryState, setUser, setLoggedIn } = props;
+  const { setUser, setLoggedIn } = props;
+
+  const navigate = useNavigate();
 
   const [emailValue, setEmailValue] = useState('');
   const [passwordValue, setPasswordValue] = useState('');
@@ -13,7 +16,7 @@ export default function Login(props){
     console.log(emailValue, passwordValue);
     setUser({name: "Nathen"})
     setLoggedIn(true);
-    setHistoryState(`/account`);
+    navigate('/account', {replace: true});
   }
 
   return(

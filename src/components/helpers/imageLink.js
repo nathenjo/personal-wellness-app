@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 export default function ImageLink(props) {
 
-    const { className, setHistoryState, image, imageAlt, path } = props;
+    const { className, image, imageAlt } = props;
 
        return(
-         <div onClick={() => setHistoryState(`/${path}`)} className={`image-link ${className}`}>
+         <div className={`image-link ${className}`}>
             <img src={image} alt={imageAlt} />
          </div>
        );
